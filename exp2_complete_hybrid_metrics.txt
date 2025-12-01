@@ -1,0 +1,40 @@
+VPN DETECTION METRICS
+======================================================================
+
+Per-PCAP Results:
+aim_chat_3a.pcap               | GT: Non-VPN  | Pred: VPN      | Alerts:  133
+aim_chat_3b.pcap               | GT: Non-VPN  | Pred: VPN      | Alerts:  160
+email1a.pcap                   | GT: Non-VPN  | Pred: VPN      | Alerts: 2426
+email1b.pcap                   | GT: Non-VPN  | Pred: VPN      | Alerts: 2701
+email2a.pcap                   | GT: Non-VPN  | Pred: VPN      | Alerts:  295
+email2b.pcap                   | GT: Non-VPN  | Pred: VPN      | Alerts:  578
+facebook_audio1a.pcap          | GT: Non-VPN  | Pred: VPN      | Alerts: 3605
+facebook_audio2a.pcap          | GT: Non-VPN  | Pred: VPN      | Alerts: 6604
+facebook_chat_4a.pcap          | GT: Non-VPN  | Pred: VPN      | Alerts:  228
+facebook_chat_4b.pcap          | GT: Non-VPN  | Pred: VPN      | Alerts:  412
+facebook_video1a.pcap          | GT: Non-VPN  | Pred: VPN      | Alerts: 14148
+facebook_video2a.pcap          | GT: Non-VPN  | Pred: VPN      | Alerts: 21795
+vpn_aim_chat1a.pcap            | GT: VPN      | Pred: VPN      | Alerts:  108
+vpn_aim_chat1b.pcap            | GT: VPN      | Pred: VPN      | Alerts:  117
+vpn_bittorrent.pcap            | GT: VPN      | Pred: VPN      | Alerts: 46171
+vpn_email2a.pcap               | GT: VPN      | Pred: VPN      | Alerts:  259
+vpn_email2b.pcap               | GT: VPN      | Pred: VPN      | Alerts: 1895
+vpn_facebook_audio2.pcap       | GT: VPN      | Pred: VPN      | Alerts: 1498
+vpn_facebook_chat1a.pcap       | GT: VPN      | Pred: VPN      | Alerts:  865
+vpn_facebook_chat1b.pcap       | GT: VPN      | Pred: VPN      | Alerts:  747
+vpn_ftps_A.pcap                | GT: VPN      | Pred: VPN      | Alerts: 11625
+vpn_ftps_B.pcap                | GT: VPN      | Pred: VPN      | Alerts: 9602
+vpn_hangouts_audio1.pcap       | GT: VPN      | Pred: VPN      | Alerts: 39070
+vpn_hangouts_audio2.pcap       | GT: VPN      | Pred: VPN      | Alerts: 44427
+vpn_hangouts_chat1a.pcap       | GT: VPN      | Pred: VPN      | Alerts: 2798
+vpn_hangouts_chat1b.pcap       | GT: VPN      | Pred: VPN      | Alerts: 1721
+
+======================================================================
+CLASSIFICATION METRICS
+======================================================================
+TP: 14, TN: 0, FP: 12, FN: 0
+Accuracy:  53.85%
+Precision: 53.85%
+Recall:    100.00%
+F1-Score:  70.00%
+FPR:       100.00%

@@ -1,0 +1,102 @@
+# Object files
+*.o
+*.obj
+
+# Libraries
+*.a
+*.lib
+
+# Executables
+flow_test
+interactive_test
+demo_test
+validation_test
+verbose_test
+proc1_test
+proc2_test
+proc2_test_events
+integrated_test
+snort_integration_test
+full_snort_integration_test
+benchmark_test
+simple_parallel_test
+unsw_nb15_demo_test
+unsw_parallel_test
+dual_engine_unsw_test
+debug_rolling
+debug_queue
+
+# Build artifacts
+libflowanalyzer.a
+*.so
+snort3/build/
+snort3/install/
+
+# Performance profiling
+*.out
+callgrind.out.*
+massif.out.*
+perf.data
+perf.data.old
+
+# Debug files
+*.dSYM/
+
+# Temporary files
+*~
+*.tmp
+*.swp
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-*
+.DS_Store
+
+# Claude Code context file (contains local project information)
+CLAUDE.md
+.claude/
+
+# Experiment results and logs
+experiment_results/
+results/
+*_output.log
+*_results.log
+*.log
+experiment_complete.log
+exp*_guideline.md
+*_guideline.md
+
+# Datasets
+datasets/
+*.pcap
+*.pcapng
+UNSW-NB15/
+CICIDS2017/
+*.csv
+*.npy
+dataUNSW/
+dataCICIDS2017_HTTPS/
+dataVPN/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Test directories
+test_data/
+test_results/
+test_output/
+tests/output/
+tests/results/
+quick_test_results/
+snort3_cheat_results/
+full_benchmark_results_*/
+test_benchmark_*/
+
+# Third-party dependencies and tools
+dependencies/
+ai-ids-analyzer/
+baselines/

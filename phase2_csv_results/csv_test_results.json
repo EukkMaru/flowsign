@@ -1,0 +1,37 @@
+{
+  "snort_simulated": {
+    "precision": 0.013092909940667573,
+    "recall": 0.006147228455909587,
+    "f1_score": 0.008366375220279247,
+    "accuracy": 0.815681363376347,
+    "true_positives": 1975,
+    "true_negatives": 2069894,
+    "false_positives": 148870,
+    "false_negatives": 319308,
+    "tpr": 0.006147228455909587,
+    "fpr": 0.06709591466239763
+  },
+  "flowsign_actual": {
+    "precision": 0.8815481498758352,
+    "recall": 0.9999501996682053,
+    "f1_score": 0.9370236744550967,
+    "accuracy": 0.9829987397870984,
+    "true_positives": 321267,
+    "true_negatives": 2175596,
+    "false_positives": 43168,
+    "false_negatives": 16,
+    "tpr": 0.9999501996682053,
+    "fpr": 0.019455877236154905
+  },
+  "hybrid": {
+    "precision": 0.6266557954547671,
+    "recall": 0.9999501996682053,
+    "f1_score": 0.7704688039599401,
+    "accuracy": 0.9246399771342814
+  },
+  "dataset_info": {
+    "total_flows": 2540047,
+    "normal_flows": 2218764,
+    "attack_flows": 321283
+  }
+}

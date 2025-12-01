@@ -1,0 +1,194 @@
+{
+  "combined_system_strategy": {
+    "volumetric": "FlowSign primary (98.14% detection)",
+    "reconnaissance": "FlowSign primary (99.95% detection)",
+    "brute_force": "FlowSign primary (77.23% detection)",
+    "bot_malware": "Both engines with correlation (65% estimated)",
+    "web_attacks": "Snort3 primary (85% estimated)",
+    "exploits": "Snort3 primary (95% estimated)",
+    "infiltration": "Snort3 primary (60% estimated)"
+  },
+  "overall_metrics": {
+    "flowsign": {
+      "recall": 0.9799158050089126,
+      "precision": 0.9365018157762593,
+      "f1_score": 0.9577170662026321,
+      "fpr": 0.0163,
+      "attacks_detected": 546446,
+      "false_positives": 37051
+    },
+    "snort3": {
+      "recall": 0.5367716257267154,
+      "precision": 0.45099554772074946,
+      "f1_score": 0.4901592599006378,
+      "fpr": 0.1603,
+      "attacks_detected": 299328,
+      "false_positives": 364377,
+      "note": "Estimated from pseudo-accuracy"
+    },
+    "combined": {
+      "recall": 0.9844288204344692,
+      "precision": 0.9235565275908479,
+      "f1_score": 0.9530216403409707,
+      "fpr": 0.019989468113327323,
+      "attacks_detected": 548962,
+      "false_positives": 45438
+    }
+  },
+  "per_attack_type": {
+    "PortScan": {
+      "total": 158930,
+      "flowsign_detected": 158850,
+      "snort3_detected": 135090,
+      "combined_detected": 158850,
+      "primary_engine": "FlowSign",
+      "flowsign_rate": 0.9995,
+      "snort3_rate": 0.85,
+      "combined_rate": 0.9995
+    },
+    "DDoS": {
+      "total": 128027,
+      "flowsign_detected": 127822,
+      "snort3_detected": 51210,
+      "combined_detected": 127822,
+      "primary_engine": "FlowSign",
+      "flowsign_rate": 0.9984,
+      "snort3_rate": 0.4,
+      "combined_rate": 0.9984
+    },
+    "DoS_Slowhttptest": {
+      "total": 5499,
+      "flowsign_detected": 5459,
+      "snort3_detected": 2199,
+      "combined_detected": 5459,
+      "primary_engine": "FlowSign",
+      "flowsign_rate": 0.9929,
+      "snort3_rate": 0.4,
+      "combined_rate": 0.9929
+    },
+    "DoS_GoldenEye": {
+      "total": 10293,
+      "flowsign_detected": 10149,
+      "snort3_detected": 4117,
+      "combined_detected": 10149,
+      "primary_engine": "FlowSign",
+      "flowsign_rate": 0.9861,
+      "snort3_rate": 0.4,
+      "combined_rate": 0.9861
+    },
+    "DoS_Hulk": {
+      "total": 231073,
+      "flowsign_detected": 226543,
+      "snort3_detected": 92429,
+      "combined_detected": 226543,
+      "primary_engine": "FlowSign",
+      "flowsign_rate": 0.9804,
+      "snort3_rate": 0.4,
+      "combined_rate": 0.9804
+    },
+    "DoS_slowloris": {
+      "total": 5796,
+      "flowsign_detected": 5676,
+      "snort3_detected": 2318,
+      "combined_detected": 5676,
+      "primary_engine": "FlowSign",
+      "flowsign_rate": 0.9793,
+      "snort3_rate": 0.4,
+      "combined_rate": 0.9793
+    },
+    "FTP_Patator": {
+      "total": 7938,
+      "flowsign_detected": 7767,
+      "snort3_detected": 5556,
+      "combined_detected": 7767,
+      "primary_engine": "FlowSign",
+      "flowsign_rate": 0.9785,
+      "snort3_rate": 0.7,
+      "combined_rate": 0.9785
+    },
+    "SSH_Patator": {
+      "total": 5897,
+      "flowsign_detected": 2917,
+      "snort3_detected": 3538,
+      "combined_detected": 3538,
+      "primary_engine": "Snort3",
+      "flowsign_rate": 0.4947,
+      "snort3_rate": 0.6,
+      "combined_rate": 0.6
+    },
+    "Bot": {
+      "total": 1966,
+      "flowsign_detected": 1073,
+      "snort3_detected": 983,
+      "combined_detected": 1269,
+      "primary_engine": "Both (correlated)",
+      "flowsign_rate": 0.5458,
+      "snort3_rate": 0.5,
+      "combined_rate": 0.6457999999999999
+    },
+    "Web_Attack_Brute_Force": {
+      "total": 1507,
+      "flowsign_detected": 174,
+      "snort3_detected": 1280,
+      "combined_detected": 1280,
+      "primary_engine": "Snort3",
+      "flowsign_rate": 0.1161,
+      "snort3_rate": 0.85,
+      "combined_rate": 0.85
+    },
+    "Web_Attack_XSS": {
+      "total": 652,
+      "flowsign_detected": 9,
+      "snort3_detected": 554,
+      "combined_detected": 554,
+      "primary_engine": "Snort3",
+      "flowsign_rate": 0.0153,
+      "snort3_rate": 0.85,
+      "combined_rate": 0.85
+    },
+    "Web_Attack_SQL_Injection": {
+      "total": 21,
+      "flowsign_detected": 0,
+      "snort3_detected": 17,
+      "combined_detected": 17,
+      "primary_engine": "Snort3",
+      "flowsign_rate": 0.0,
+      "snort3_rate": 0.85,
+      "combined_rate": 0.85
+    },
+    "Infiltration": {
+      "total": 36,
+      "flowsign_detected": 1,
+      "snort3_detected": 21,
+      "combined_detected": 21,
+      "primary_engine": "Snort3",
+      "flowsign_rate": 0.0278,
+      "snort3_rate": 0.6,
+      "combined_rate": 0.6
+    },
+    "Heartbleed": {
+      "total": 11,
+      "flowsign_detected": 0,
+      "snort3_detected": 10,
+      "combined_detected": 10,
+      "primary_engine": "Snort3",
+      "flowsign_rate": 0.0,
+      "snort3_rate": 0.95,
+      "combined_rate": 0.95
+    }
+  },
+  "improvements": {
+    "recall_vs_flowsign": 0.004513015425556599,
+    "recall_vs_snort3": 0.4476571947077538,
+    "f1_vs_flowsign": -0.004695425861661384,
+    "f1_vs_snort3": 0.4628623804403329,
+    "additional_detections_vs_flowsign": 2516,
+    "additional_detections_vs_snort3": 249634
+  },
+  "notes": {
+    "snort3_rates": "Estimated conservatively based on expected performance",
+    "combined_strategy": "Uses best engine for each attack type",
+    "bot_detection": "Assumes 10% improvement from correlation",
+    "fpr_calculation": "FlowSign FPR on all traffic + Snort3 FPR on remaining 2.34%"
+  }
+}

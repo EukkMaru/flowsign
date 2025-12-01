@@ -1,0 +1,20 @@
+{
+  "dataset": "CIC-IDS2017",
+  "method": "FlowSign Cheat Rules",
+  "rules": 451,
+  "features": 11,
+  "total_flows": 2830743,
+  "metrics": {
+    "accuracy": 0.9829783205328071,
+    "precision": 0.9366063685009787,
+    "recall": 0.9799191601840594,
+    "f1": 0.9577733375398745,
+    "fpr": 0.01627119300232238,
+    "tp": 546448,
+    "tn": 2236111,
+    "fp": 36986,
+    "fn": 11198
+  },
+  "evaluation_type": "Full dataset (overfitted)",
+  "note": "Trained and evaluated on same data (cheat rules)"
+}

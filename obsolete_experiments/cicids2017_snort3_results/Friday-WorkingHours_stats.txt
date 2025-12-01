@@ -1,0 +1,16 @@
+[FlowSign Bridge] Initializing parallel engine integration...
+[FlowSign Bridge] Logging enabled for debugging
+[Parallel Engine] Initializing with dual-thread architecture...
+  Window Size: 50
+  Queue Capacity: 10000
+  Rules File: unsw_nb15_rules.txt
+[FlowSign Bridge] Initialization failed: stod
+[Snort3] Warning: SnortSharp integration failed to initialize
+[FlowSign Bridge] Shutdown requested
+[FlowSign Bridge] Final stats:
+  Packets received: 0
+  Packets copied: 0
+  Copy failures: 0
+  Total bytes copied: 0
+  Null packets: 0
+[FlowSign Bridge] Shutdown complete

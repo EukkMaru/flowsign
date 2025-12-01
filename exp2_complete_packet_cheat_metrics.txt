@@ -1,0 +1,40 @@
+VPN DETECTION METRICS
+======================================================================
+
+Per-PCAP Results:
+aim_chat_3a.pcap               | GT: Non-VPN  | Pred: Non-VPN  | Alerts:    0
+aim_chat_3b.pcap               | GT: Non-VPN  | Pred: Non-VPN  | Alerts:    0
+email1a.pcap                   | GT: Non-VPN  | Pred: Non-VPN  | Alerts:    0
+email1b.pcap                   | GT: Non-VPN  | Pred: Non-VPN  | Alerts:    0
+email2a.pcap                   | GT: Non-VPN  | Pred: Non-VPN  | Alerts:    0
+email2b.pcap                   | GT: Non-VPN  | Pred: Non-VPN  | Alerts:    0
+facebook_audio1a.pcap          | GT: Non-VPN  | Pred: Non-VPN  | Alerts:    0
+facebook_audio2a.pcap          | GT: Non-VPN  | Pred: Non-VPN  | Alerts:    0
+facebook_chat_4a.pcap          | GT: Non-VPN  | Pred: Non-VPN  | Alerts:    0
+facebook_chat_4b.pcap          | GT: Non-VPN  | Pred: Non-VPN  | Alerts:    0
+facebook_video1a.pcap          | GT: Non-VPN  | Pred: Non-VPN  | Alerts:    0
+facebook_video2a.pcap          | GT: Non-VPN  | Pred: Non-VPN  | Alerts:    0
+vpn_aim_chat1a.pcap            | GT: VPN      | Pred: Non-VPN  | Alerts:    0
+vpn_aim_chat1b.pcap            | GT: VPN      | Pred: Non-VPN  | Alerts:    0
+vpn_bittorrent.pcap            | GT: VPN      | Pred: Non-VPN  | Alerts:    0
+vpn_email2a.pcap               | GT: VPN      | Pred: Non-VPN  | Alerts:    0
+vpn_email2b.pcap               | GT: VPN      | Pred: Non-VPN  | Alerts:    0
+vpn_facebook_audio2.pcap       | GT: VPN      | Pred: Non-VPN  | Alerts:    0
+vpn_facebook_chat1a.pcap       | GT: VPN      | Pred: Non-VPN  | Alerts:    0
+vpn_facebook_chat1b.pcap       | GT: VPN      | Pred: Non-VPN  | Alerts:    0
+vpn_ftps_A.pcap                | GT: VPN      | Pred: Non-VPN  | Alerts:    0
+vpn_ftps_B.pcap                | GT: VPN      | Pred: Non-VPN  | Alerts:    0
+vpn_hangouts_audio1.pcap       | GT: VPN      | Pred: Non-VPN  | Alerts:    0
+vpn_hangouts_audio2.pcap       | GT: VPN      | Pred: Non-VPN  | Alerts:    0
+vpn_hangouts_chat1a.pcap       | GT: VPN      | Pred: Non-VPN  | Alerts:    0
+vpn_hangouts_chat1b.pcap       | GT: VPN      | Pred: Non-VPN  | Alerts:    0
+
+======================================================================
+CLASSIFICATION METRICS
+======================================================================
+TP: 0, TN: 12, FP: 0, FN: 14
+Accuracy:  46.15%
+Precision: 0.00%
+Recall:    0.00%
+F1-Score:  0.00%
+FPR:       0.00%

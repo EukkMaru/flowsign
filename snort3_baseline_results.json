@@ -1,0 +1,36 @@
+{
+  "dataset": "CIC-IDS2017",
+  "method": "Snort3 Community Rules (Day-level correlation)",
+  "total_flows": 2830743,
+  "total_attacks": 557646,
+  "total_snort3_alerts": 449843,
+  "alert_precision_estimate": 0.6104151892993778,
+  "day_statistics": {
+    "Friday-WorkingHours": {
+      "attacks": 288923,
+      "total": 703245,
+      "alerts": 47636
+    },
+    "Monday-WorkingHours": {
+      "attacks": 0,
+      "total": 529918,
+      "alerts": 62844
+    },
+    "Thursday-WorkingHours": {
+      "attacks": 2216,
+      "total": 458968,
+      "alerts": 50508
+    },
+    "Tuesday-WorkingHours": {
+      "attacks": 13835,
+      "total": 445909,
+      "alerts": 61900
+    },
+    "Wednesday-workingHours": {
+      "attacks": 252672,
+      "total": 692703,
+      "alerts": 226955
+    }
+  },
+  "note": "Approximate evaluation based on temporal correlation of alerts with attack periods"
+}

@@ -1,0 +1,219 @@
+{
+  "dataset": "NSL-KDD",
+  "method": "FlowSign (Decision Tree)",
+  "train_samples": 125973,
+  "test_samples": 22544,
+  "features": 41,
+  "configuration": {
+    "max_depth": 20,
+    "min_samples_split": 100,
+    "min_samples_leaf": 100,
+    "class_weight": {
+      "0": 1.0,
+      "1": 2.0
+    },
+    "tree_depth": 13,
+    "tree_leaves": 93
+  },
+  "overall_metrics": {
+    "accuracy": 0.8439939673527325,
+    "precision": 0.9706001212366134,
+    "recall": 0.7486168471908361,
+    "f1_score": 0.8452773745105803,
+    "fpr": 0.029966017917825147
+  },
+  "confusion_matrix": {
+    "tp": 9607,
+    "tn": 9420,
+    "fp": 291,
+    "fn": 3226
+  },
+  "per_attack_type": {
+    "apache2": {
+      "total": 737,
+      "detected": 483,
+      "rate": 0.655359565807327
+    },
+    "back": {
+      "total": 359,
+      "detected": 353,
+      "rate": 0.9832869080779945
+    },
+    "buffer_overflow": {
+      "total": 20,
+      "detected": 13,
+      "rate": 0.65
+    },
+    "ftp_write": {
+      "total": 3,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "guess_passwd": {
+      "total": 1231,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "httptunnel": {
+      "total": 133,
+      "detected": 111,
+      "rate": 0.8345864661654135
+    },
+    "imap": {
+      "total": 1,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "ipsweep": {
+      "total": 141,
+      "detected": 139,
+      "rate": 0.9858156028368793
+    },
+    "land": {
+      "total": 7,
+      "detected": 7,
+      "rate": 1.0
+    },
+    "loadmodule": {
+      "total": 2,
+      "detected": 2,
+      "rate": 1.0
+    },
+    "mailbomb": {
+      "total": 293,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "mscan": {
+      "total": 996,
+      "detected": 674,
+      "rate": 0.6767068273092369
+    },
+    "multihop": {
+      "total": 18,
+      "detected": 5,
+      "rate": 0.2777777777777778
+    },
+    "named": {
+      "total": 17,
+      "detected": 3,
+      "rate": 0.17647058823529413
+    },
+    "neptune": {
+      "total": 4657,
+      "detected": 4621,
+      "rate": 0.9922697015245866
+    },
+    "nmap": {
+      "total": 73,
+      "detected": 73,
+      "rate": 1.0
+    },
+    "perl": {
+      "total": 2,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "phf": {
+      "total": 2,
+      "detected": 1,
+      "rate": 0.5
+    },
+    "pod": {
+      "total": 41,
+      "detected": 33,
+      "rate": 0.804878048780488
+    },
+    "portsweep": {
+      "total": 157,
+      "detected": 156,
+      "rate": 0.9936305732484076
+    },
+    "processtable": {
+      "total": 685,
+      "detected": 424,
+      "rate": 0.618978102189781
+    },
+    "ps": {
+      "total": 15,
+      "detected": 5,
+      "rate": 0.33333333333333326
+    },
+    "rootkit": {
+      "total": 13,
+      "detected": 4,
+      "rate": 0.3076923076923077
+    },
+    "saint": {
+      "total": 319,
+      "detected": 313,
+      "rate": 0.9811912225705329
+    },
+    "satan": {
+      "total": 735,
+      "detected": 732,
+      "rate": 0.9959183673469387
+    },
+    "sendmail": {
+      "total": 14,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "smurf": {
+      "total": 665,
+      "detected": 662,
+      "rate": 0.9954887218045113
+    },
+    "snmpgetattack": {
+      "total": 178,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "snmpguess": {
+      "total": 331,
+      "detected": 3,
+      "rate": 0.00906344410876133
+    },
+    "sqlattack": {
+      "total": 2,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "teardrop": {
+      "total": 12,
+      "detected": 12,
+      "rate": 1.0
+    },
+    "udpstorm": {
+      "total": 2,
+      "detected": 2,
+      "rate": 1.0
+    },
+    "warezmaster": {
+      "total": 944,
+      "detected": 766,
+      "rate": 0.8114406779661016
+    },
+    "worm": {
+      "total": 2,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "xlock": {
+      "total": 9,
+      "detected": 0,
+      "rate": 0.0
+    },
+    "xsnoop": {
+      "total": 4,
+      "detected": 2,
+      "rate": 0.5
+    },
+    "xterm": {
+      "total": 13,
+      "detected": 8,
+      "rate": 0.6153846153846154
+    }
+  },
+  "note": "NSL-KDD has no PCAPs - cannot evaluate Snort3"
+}

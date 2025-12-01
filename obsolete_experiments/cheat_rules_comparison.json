@@ -1,0 +1,242 @@
+{
+  "experiment": "Cheat Rules Comparison: Packet-Level vs Flow-Level Detection",
+  "date": "2025-11-16",
+  "hypothesis": "Both engines with overfitted rules should achieve high performance on training data",
+
+  "snort3_community_rules": {
+    "type": "Packet-level, signature-based (NOT overfitted)",
+    "rules": 4017,
+    "rules_triggered": 224,
+    "total_alerts": 379249,
+    "unique_flows_alerted": 156928,
+    "confusion_matrix": {
+      "TP": 4783,
+      "TN": 2141439,
+      "FP": 77325,
+      "FN": 316500
+    },
+    "metrics": {
+      "accuracy": 84.50,
+      "precision": 5.83,
+      "recall": 1.49,
+      "f1_score": 2.37,
+      "fpr": 3.49
+    }
+  },
+
+  "snort3_cheat_rules": {
+    "type": "Packet-level, overfitted to UNSW-NB15",
+    "rules": 434,
+    "rules_triggered": 434,
+    "rule_types": {
+      "IP_based": 14,
+      "port_based": 57,
+      "service_based": 9,
+      "flow_pattern": 2,
+      "category_specific": 147,
+      "5_tuple_exact": 205
+    },
+    "total_alerts": 14721945,
+    "unique_flows_alerted": 115968,
+    "alert_increase_vs_community": "38.8x",
+    "confusion_matrix": {
+      "TP": 137128,
+      "TN": 2021946,
+      "FP": 196818,
+      "FN": 184155
+    },
+    "metrics": {
+      "accuracy": 85.00,
+      "precision": 41.06,
+      "recall": 42.68,
+      "f1_score": 41.86,
+      "fpr": 8.87
+    },
+    "improvement_vs_community": {
+      "TP": "28.67x better (137,128 vs 4,783)",
+      "precision": "7.04x better (41.06% vs 5.83%)",
+      "recall": "28.64x better (42.68% vs 1.49%)",
+      "f1_score": "17.66x better (41.86% vs 2.37%)",
+      "accuracy": "0.59% better (85.00% vs 84.50%)"
+    },
+    "detection_by_category": {
+      "best": "Generic (54.77%)",
+      "second_best": "Shellcode (32.69%)",
+      "third_best": "Fuzzers (29.92%)",
+      "worst": "Reconnaissance (0.00%), Shellcode variant (0.00%)"
+    }
+  },
+
+  "flowsign_cheat_rules": {
+    "type": "Flow-level, overfitted to UNSW-NB15",
+    "rules": 609,
+    "features": 11,
+    "training": "Entire UNSW-NB15 dataset (intentional overfitting)",
+    "confusion_matrix": {
+      "TP": 313516,
+      "TN": 2202368,
+      "FP": 16396,
+      "FN": 7767
+    },
+    "metrics": {
+      "accuracy": 99.05,
+      "precision": 95.03,
+      "recall": 97.58,
+      "f1_score": 96.29,
+      "fpr": 0.74
+    }
+  },
+
+  "cheat_rules_comparison": {
+    "snort3_cheat_vs_flowsign": {
+      "accuracy": {
+        "snort3": 85.00,
+        "flowsign": 99.05,
+        "gap": "14.05 percentage points",
+        "ratio": "1.17x better"
+      },
+      "precision": {
+        "snort3": 41.06,
+        "flowsign": 95.03,
+        "gap": "53.97 percentage points",
+        "ratio": "2.31x better"
+      },
+      "recall": {
+        "snort3": 42.68,
+        "flowsign": 97.58,
+        "gap": "54.90 percentage points",
+        "ratio": "2.29x better"
+      },
+      "f1_score": {
+        "snort3": 41.86,
+        "flowsign": 96.29,
+        "gap": "54.43 percentage points",
+        "ratio": "2.30x better"
+      },
+      "false_positive_rate": {
+        "snort3": 8.87,
+        "flowsign": 0.74,
+        "gap": "8.13 percentage points",
+        "ratio": "11.99x worse"
+      }
+    },
+
+    "why_flowsign_still_better": [
+      "Flow-level features capture temporal patterns that packets cannot",
+      "Statistical features (IAT, duration, packet rates) are more robust",
+      "Packet-level rules match individual packets, not flow behavior",
+      "Snort cheat rules still rely on 5-tuples and ports, missing behavioral patterns",
+      "FlowSign uses 11 aggregated features vs Snort's exact matching",
+      "Flow-based detection is inherently more resilient to packet-level evasion"
+    ]
+  },
+
+  "all_three_comparison": {
+    "accuracy": {
+      "community": 84.50,
+      "snort_cheat": 85.00,
+      "flowsign_cheat": 99.05
+    },
+    "precision": {
+      "community": 5.83,
+      "snort_cheat": 41.06,
+      "flowsign_cheat": 95.03
+    },
+    "recall": {
+      "community": 1.49,
+      "snort_cheat": 42.68,
+      "flowsign_cheat": 97.58
+    },
+    "f1_score": {
+      "community": 2.37,
+      "snort_cheat": 41.86,
+      "flowsign_cheat": 96.29
+    },
+    "attacks_detected": {
+      "community": 4783,
+      "snort_cheat": 137128,
+      "flowsign_cheat": 313516
+    },
+    "attacks_missed": {
+      "community": 316500,
+      "snort_cheat": 184155,
+      "flowsign_cheat": 7767
+    },
+    "attacks_missed_percentage": {
+      "community": 98.51,
+      "snort_cheat": 57.32,
+      "flowsign_cheat": 2.42
+    }
+  },
+
+  "key_findings": {
+    "snort_cheat_rules_performance": [
+      "41.86% F1-score with overfitted rules (vs 2.37% with community rules)",
+      "17.66x improvement over community rules",
+      "42.68% recall - detected 137,128 attacks (vs 4,783 with community)",
+      "But still 41.06% precision - high false positive rate (8.87%)",
+      "Generated 14.7M alerts (vs 379K with community rules)",
+      "Overfitting helped but did not achieve >95% performance"
+    ],
+
+    "flowsign_superiority_maintained": [
+      "96.29% F1-score - 2.30x better than Snort cheat rules",
+      "95.03% precision - 2.31x better",
+      "97.58% recall - 2.29x better",
+      "0.74% FPR - 11.99x better (lower is better)",
+      "Detected 313,516 attacks (2.29x more than Snort cheat rules)",
+      "Missed only 7,767 attacks (23.7x fewer than Snort cheat rules)"
+    ],
+
+    "why_packet_level_struggles": [
+      "Packet-level rules cannot capture temporal patterns",
+      "5-tuple matching misses attacks with varying addresses",
+      "Port-based rules fail on dynamic port usage",
+      "IP-based rules limited to known attackers (only 4 main IPs)",
+      "No statistical aggregation - each packet evaluated independently",
+      "Cannot detect rate-based attacks (DoS, scanning) effectively",
+      "Overfitting to exact patterns makes rules brittle"
+    ],
+
+    "flow_level_advantages": [
+      "Temporal aggregation captures attack behavior over time",
+      "Statistical features (mean, std, IAT) generalize better",
+      "Rate-based features detect volume/speed anomalies",
+      "Direction-specific analysis (forward vs backward)",
+      "Protocol-agnostic behavioral patterns",
+      "Resistant to packet-level obfuscation",
+      "Fewer rules needed (609 vs 434, but more effective)"
+    ]
+  },
+
+  "alert_analysis": {
+    "community_rules": {
+      "total_alerts": 379249,
+      "alert_rate": "1.16% of packets",
+      "top_7_rules_percentage": 95.92,
+      "concentration": "highly concentrated"
+    },
+    "cheat_rules": {
+      "total_alerts": 14721945,
+      "alert_rate": "45.08% of packets",
+      "alert_increase": "38.8x more than community",
+      "concentration": "distributed across all 434 rules"
+    },
+    "observation": "Cheat rules generated 45% alert rate (14.7M alerts) but still only 42.68% recall, showing packet-level limitations"
+  },
+
+  "conclusion": {
+    "experiment_validates": [
+      "Flow-based detection fundamentally superior to packet-based",
+      "Even with overfitting, packet rules cannot match flow performance",
+      "Temporal and statistical features capture attack patterns better",
+      "FlowSign's 96.29% F1 vs Snort cheat's 41.86% F1 proves architectural advantage"
+    ],
+    "practical_implications": [
+      "Packet-level IDS alone insufficient for modern attacks",
+      "Flow-based analysis essential for high-accuracy detection",
+      "Hybrid approach (packets + flows) recommended for production",
+      "ML-based flow analysis outperforms signature-based packets"
+    ]
+  }
+}

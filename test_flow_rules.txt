@@ -1,0 +1,6 @@
+sid:1001 msg:"High packet rate detected" flow_packets_per_sec > 100
+sid:1002 msg:"Long-lived connection" flow_duration > 5.0
+sid:1003 msg:"High data transfer" flow_bytes_per_sec > 1000000
+sid:1004 msg:"Potential SYN flood" syn_flag_count > 10 AND ack_flag_count < 5
+sid:1005 msg:"Small packet reconnaissance" packet_length_mean < 100 AND fwd_packets > 20
+sid:1006 msg:"High SYN activity" syn_flag_count > 5

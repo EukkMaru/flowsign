@@ -1,0 +1,52 @@
+{
+  "total_https_flows": 505710,
+  "benign_flows": 505470,
+  "attack_flows": 240,
+  "attack_breakdown": {
+    "PortScan": 240
+  },
+  "per_file": {
+    "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv": {
+      "total": 13485,
+      "benign": 13485,
+      "attacks": {}
+    },
+    "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv": {
+      "total": 26935,
+      "benign": 26695,
+      "attacks": {
+        "PortScan": 240
+      }
+    },
+    "Friday-WorkingHours-Morning.pcap_ISCX.csv": {
+      "total": 39228,
+      "benign": 39228,
+      "attacks": {}
+    },
+    "Monday-WorkingHours.pcap_ISCX.csv": {
+      "total": 140952,
+      "benign": 140952,
+      "attacks": {}
+    },
+    "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv": {
+      "total": 51772,
+      "benign": 51772,
+      "attacks": {}
+    },
+    "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv": {
+      "total": 35833,
+      "benign": 35833,
+      "attacks": {}
+    },
+    "Tuesday-WorkingHours.pcap_ISCX.csv": {
+      "total": 97276,
+      "benign": 97276,
+      "attacks": {}
+    },
+    "Wednesday-workingHours.pcap_ISCX.csv": {
+      "total": 100229,
+      "benign": 100229,
+      "attacks": {}
+    }
+  }
+}

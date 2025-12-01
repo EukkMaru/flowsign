@@ -1,0 +1,18 @@
+sid:3001 msg:"Fuzzers - Abnormal packet patterns" packet_length_std > 800.0
+sid:3002 msg:"Fuzzers - High variance traffic" flow_iat_std > 2000.0
+sid:3003 msg:"Analysis - Port scanning activity" fwd_packets > 20 AND packet_length_mean < 100
+sid:3004 msg:"Reconnaissance - Network probing" syn_flag_count > 10 AND ack_flag_count < 3
+sid:3005 msg:"DoS - High packet rate attack" flow_packets_per_sec > 500
+sid:3006 msg:"DoS - SYN flood detected" syn_flag_count > 20
+sid:3007 msg:"DoS - Resource exhaustion" total_fwd_packets > 1000 AND flow_duration < 2.0
+sid:3008 msg:"Exploits - Large payload transfer" total_fwd_bytes > 10000000
+sid:3009 msg:"Exploits - Suspicious data exchange" bwd_bytes > 1000000 AND fwd_bytes < 5000
+sid:3010 msg:"Backdoors - Persistent connection" flow_duration > 600.0
+sid:3011 msg:"Backdoors - Regular beacon activity" flow_iat_mean > 30000.0 AND flow_iat_mean < 60000.0
+sid:3012 msg:"Generic - Abnormal flow behavior" down_up_ratio > 20.0
+sid:3013 msg:"Generic - Suspicious packet timing" flow_iat_min < 0.001 AND flow_iat_max > 10000.0
+sid:3014 msg:"Shellcode - Small packet exploitation" packet_length_mean < 60 AND total_fwd_packets > 50
+sid:3015 msg:"Worms - Propagation pattern" flow_bytes_per_sec > 5000000
+sid:3016 msg:"Worms - Multiple connection attempts" rst_flag_count > 15
+sid:3017 msg:"Anomaly - High connection rate" total_fwd_packets > 500
+sid:3018 msg:"Anomaly - Unusual packet distribution" packet_length_std > 1000.0

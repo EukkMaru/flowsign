@@ -1,0 +1,3 @@
+# Empty FlowSign Rules File
+# Used for scenarios without flow-based detection
+# Total rules: 0

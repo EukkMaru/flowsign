@@ -1,0 +1,4 @@
+# Test FlowSign Rules
+sid:6000 msg:"Test DoS Rule" flow_packets_per_sec > 100
+sid:6001 msg:"Test Exploit Rule" fwd_packet_length_mean > 500 AND bwd_packet_length_mean < 100
+sid:6002 msg:"Test Reconnaissance" syn_flag_count > 10 AND ack_flag_count < 5

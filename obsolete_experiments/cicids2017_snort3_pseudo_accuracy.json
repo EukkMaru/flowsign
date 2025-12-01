@@ -1,0 +1,74 @@
+{
+  "method": "Statistical matching via destination port correlation",
+  "limitation": "Pseudo-accuracy estimate - not exact packet-to-flow matching",
+  "combined_metrics": {
+    "precision": 0.32682069077433684,
+    "recall": 0.4014822987099523,
+    "f1": 0.36032454649394446,
+    "accuracy": 0.7685163217512041,
+    "fpr": 0.1603258984894714,
+    "estimated_tp": 147018,
+    "estimated_tn": 1585984,
+    "estimated_fp": 302825,
+    "estimated_fn": 219170,
+    "total_alerts": 449843,
+    "matched_alerts": 408793
+  },
+  "per_pcap_results": {
+    "Friday-WorkingHours": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "accuracy": 0.29341656979433567,
+      "fpr": 0.3950506709127399,
+      "estimated_tp": 0,
+      "estimated_fp": 47636,
+      "estimated_fn": 128027,
+      "total_alerts": 47636
+    },
+    "Monday-WorkingHours": {
+      "precision": 0.0,
+      "recall": 0,
+      "f1": 0,
+      "accuracy": 0.8847701839665109,
+      "fpr": 0.11522981603348913,
+      "estimated_tp": 0,
+      "estimated_fp": 62843,
+      "estimated_fn": 0,
+      "total_alerts": 62843
+    },
+    "Thursday-WorkingHours": {
+      "precision": 3.959768749505029e-05,
+      "recall": 0.06666666666666667,
+      "f1": 7.914836360758242e-05,
+      "accuracy": 0.8392045183358524,
+      "fpr": 0.16072172986045918,
+      "estimated_tp": 2,
+      "estimated_fp": 50506,
+      "estimated_fn": 28,
+      "total_alerts": 50508
+    },
+    "Tuesday-WorkingHours": {
+      "precision": 0.00014539579967689823,
+      "recall": 0.0006506651243493349,
+      "f1": 0.00023768024084931072,
+      "accuracy": 0.8369315195947518,
+      "fpr": 0.13739022722631172,
+      "estimated_tp": 9,
+      "estimated_fp": 61891,
+      "estimated_fn": 13823,
+      "total_alerts": 61900
+    },
+    "Wednesday-workingHours": {
+      "precision": 0.6477334813796507,
+      "recall": 0.6554063994935332,
+      "f1": 0.6515473512758861,
+      "accuracy": 0.7695879748078203,
+      "fpr": 0.17450969692339593,
+      "estimated_tp": 147007,
+      "estimated_fp": 79949,
+      "estimated_fn": 77292,
+      "total_alerts": 226956
+    }
+  }
+}
