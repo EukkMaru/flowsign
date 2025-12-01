@@ -67,6 +67,10 @@ experiment_complete.log
 exp*_guideline.md
 *_guideline.md
 
+# Documentation (except README.md)
+*.md
+!README.md
+
 # Datasets
 datasets/
 *.pcap
